@@ -1,0 +1,64 @@
+<html>
+<head>
+  <!-- Plotly.js -->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <div id="comboDiv" style="width: 1000px; height: 600px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+
+
+  <script>
+function makeplot() {
+  Plotly.d3.csv("test.csv", function(data){ processData(data) } );
+
+};
+
+function processData(allRows) {
+
+  console.log(allRows);
+  var x = [], yTemp = [], yLight = [];
+
+  for (var i=0; i<allRows.length; i++) {
+    row = allRows[i];
+    x.push( row['time'] );
+    yTemp.push( row['temperature'] );
+    yLight.push( row['light'] );
+  }
+  console.log( 'X',x, 'YTEMP',yTemp, 'YLIGHT',yLight );
+  makePlotly( x, yTemp, yLight );
+}
+
+
+function makePlotly( x, yTemp, yLight ){
+//  var plotDiv = document.getElementById("plot");
+
+  var trace1 = {
+    x: x,
+    y: yTemp,
+    type: 'scatter',
+    line: {shape: 'spline'},
+    name: 'temp'
+  };
+
+  var trace2 = {
+    x: x,
+    y: yLight,
+    type: 'scatter',
+    line: {shape: 'spline'},
+    name: 'light'
+  };
+
+  var traces = [trace1, trace2];
+
+  Plotly.newPlot('comboDiv', traces,
+    {title: 'micro:bit temperature and light'});
+
+};
+
+  makeplot();
+
+    </script>
+</body>
+
+</html>
