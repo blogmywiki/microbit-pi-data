@@ -11,6 +11,7 @@ Log micro:bit sensor data as a CSV on a Raspberry Pi and serve it as a graph in 
 ## How to make it work
 
 ![blocks in MakeCode](microbit-serial-logger-1line-string.png)
+
 Flash the HEX file above onto the BBC micro:bit. If you want to edit the program, you can drag and drop the HEX file on to the MakeCode editor or paste in the text in the .JS version of the file, also included in this repo.
 Every minute, or when you press button A, this program writes a string to the USB serial port comprising two numbers, the temperature and the light level reading separated by a colon. That's all it does. The block redirecting serial to USB probably isn't needed but is there for clarity.
 
