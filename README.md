@@ -23,7 +23,7 @@ On the Raspberry Pi, add the test.csv file and in the same folder add serial_rea
 
 Add the index.html file to the same folder. 
 
-Run the Python program by typing `python3 serial_read.py` at a terminal console prompt. If you get an error saying the port is busy, reboot the Pi and try again. If you get an unpacking error, just type `python3 serial_read.py` again. You should see data printed in the serial console every minute, or when you press button A. Note that the name of your micro:bit's serial port may be different - for example, mine just changed to /dev/ttyAMA0 from /dev/ttyACM0. If you navigate to `cd /dev/` and type `ls -m` you should see it listed, look for something similar and edit serial_read.py accordingly.
+Run the Python program by typing `python3 serial_read.py` at a terminal console prompt. If you get an error saying the port is busy, reboot the Pi and try again. If you get an unpacking error, just type `python3 serial_read.py` again. You should see data printed in the serial console every minute, or when you press button A.
 
 This program checks once a second for serial data incoming on the serial port. It splits the incoming string into two bits of data, temperature and light level, and writes it with a timestamp to the test.csv file. The timestamp is truncated just to show the date, hours and minutes.
 
