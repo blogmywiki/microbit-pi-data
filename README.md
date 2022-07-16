@@ -15,6 +15,10 @@ Log micro:bit sensor data as a CSV on a Raspberry Pi and serve it as a graph in 
 Flash the HEX file above onto the BBC micro:bit. If you want to edit the program, you can drag and drop the HEX file on to the MakeCode editor or paste in the text in the .JS version of the file, also included in this repo.
 Every minute, or when you press button A, this program writes a string to the USB serial port comprising two numbers, the temperature and the light level reading separated by a colon. That's all it does. The block redirecting serial to USB probably isn't needed but is there for clarity.
 
+Plug the micro:bit into the Raspberry Pi's USB socket.
+
+![micro:bit and old Raspberry Pi](IMG_3857-smol.JPG)
+
 On the Raspberry Pi, add the test.csv file and in the same folder add serial_read.py.
 
 Add the index.html file to the same folder. 
@@ -29,5 +33,4 @@ Now to start a simple webserver in Python, navigate to the directory where your 
 
 Then, on a computer on the same network, open a browser and navigate to http://ceefax:8888/ where 'ceefax' is the network name or IP address of your Pi, and 8888 is the port number. And you should see your data in a lovely interactive graph. The HTML page uses plotly.js so you can isolate individual lines, zoom in and out, all sorts!
 
-![micro:bit and old Raspberry Pi](IMG_3857-smol.JPG)
 ![screenshot of webpage](screenshot.png)
