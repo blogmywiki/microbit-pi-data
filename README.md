@@ -56,6 +56,7 @@ sudo python3 -m http.server 8888 &
 ```
 
 I also edited line 25 in serial_read.py to use an absolute path to the CSV file:
+
 `        with open('/home/pi/data-logging/test.csv', 'a', newline='') as f_object:`
 
 The graph web page can now be found on my set-up at http://ceefax:8888/home/pi/data-logging/
