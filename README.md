@@ -39,6 +39,23 @@ Then, on a computer on the same network, open a browser and navigate to http://c
 
 You can customise this to log any data you like. You could use the micro:bit connnected to the Pi to receive sensor data by radio from micro:bits in other room or outdoors. I'll probably add an external DS18B20 temperature sensor to get more accurate temperature data.
 
-An obvious improvement is to make the Python script and webserver run automatically at start up, rather than manually in console windows on my laptop, but this is a good start and proof of concept I think.
+An obvious improvement is to make the Python script and webserver run automatically at start up, rather than manually in console windows on my laptop, but this is a good start and proof of concept I think. (See below).
 
 I might also see if I can send the CSV file to my real webserver by FTP, and then serve up a data page on the actual interwebs.
+
+## Automatic for the people
+
+Ok, I got it working automatically... sort of. 
+
+I added these lines to /etc/rc.local:
+
+```
+sleep 10
+sudo python3 /home/pi/data-logging/serial_read.py &
+sudo python3 -m http.server 8888 &
+```
+
+I also edited line 25 in serial_read.py to use an absolute path to the CSV file:
+`        with open('/home/pi/data-logging/test.csv', 'a', newline='') as f_object:`
+
+The graph web page can now be found on my set-up at http://ceefax:8888/home/pi/data-logging/
