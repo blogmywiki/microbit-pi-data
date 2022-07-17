@@ -33,7 +33,7 @@ Now to make the data appear in a webpage on your local network, for example the 
 
 Now to start a simple webserver in Python, navigate to the directory where your files are saved and type `python3 -m http.server 8888` at the terminal prompt. (You can use port numbers other than 8888).
 
-Then, on a computer on the same network, open a browser and navigate to http://ceefax:8888/ where 'ceefax' is the network name or IP address of your Pi, and 8888 is the port number. And you should see your data in a lovely interactive graph. The HTML page uses plotly.js so you can isolate individual lines by clicking on the legend, zoom in and out, all sorts!
+Then, on a computer on the same network, open a browser and navigate to http://ceefax:8888/ where 'ceefax' is the network name or IP address of your Pi, and 8888 is the port number you chose. And you should see your data in a lovely interactive graph. The HTML page uses plotly.js so you can isolate individual lines by clicking on the legend, zoom in and out, all sorts!
 
 ![screenshot of webpage](screenshot.png)
 
@@ -61,7 +61,7 @@ I also edited line 25 in serial_read.py to use an absolute path to the CSV file:
 
 `        with open('/home/pi/data-logging/test.csv', 'a', newline='') as f_object:`
 
-Because the Python webserver is now running at root from startup, it's serving up the whole filestystem rather than just the folder where the HTML file and data are, so the graph can now be found on my set-up at http://ceefax:8888/home/pi/data-logging/
+Because the Python webserver is now running at root from startup, it's serving up the whole filesystem rather than just the folder where the HTML file and data are, so the graph can now be found on my set-up at http://ceefax:8888/home/pi/data-logging/
 
 Sometimes the web page appears but the data doesn't update becuase the micro:bit doesn't appear on /dev/ttyACM0, in which case I replug the USB and reboot the Pi.
 
