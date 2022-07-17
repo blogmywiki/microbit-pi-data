@@ -1,5 +1,5 @@
 # microbit-pi-data
-Log micro:bit sensor data in a CSV file on a Raspberry Pi and serve it as a graph in a webpage on a local network
+Log [BBC micro:bit](https://microbit.org/) sensor data in a CSV file on a Raspberry Pi and serve it as a graph in a webpage on a local network
 
 ## What you need
 
