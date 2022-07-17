@@ -8,7 +8,7 @@ Log micro:bit sensor data as a CSV on a Raspberry Pi and serve it as a graph in 
 - A micro USB cable to connect the micro:bit to the Pi
 - Er, that's it
 
-![plot of temperatures](newplot-overnight.png)
+<img src="https://github.com/blogmywiki/microbit-pi-data/blob/main/newplot-overnight.png" width=50% height=50%>
 
 ## How to make it work
 
