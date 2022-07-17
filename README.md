@@ -14,7 +14,7 @@ Log [BBC micro:bit](https://microbit.org/) sensor data in a CSV file on a Raspbe
 
 ![blocks in MakeCode](microbit-serial-logger-1line-string-smol.png)
 
-Flash the HEX file above onto the BBC micro:bit. If you want to edit the program, you can drag and drop the HEX file on to the [MakeCode editor](https://makecode.microbit.org/#editor) or paste in the text in the .JS version of the file, also included in this repo.
+Flash the HEX file above onto the BBC micro:bit. If you want to edit the program, you can drag and drop the HEX file on to the [MakeCode editor](https://makecode.microbit.org/#editor) or paste in the text in the .ts (TypeScript) version of the file, also included in this repo.
 Every minute, or when you press button A, this program writes a string to the USB serial port comprising two numbers, the temperature and the light level reading separated by a colon. That's all it does. The block redirecting serial to USB probably isn't needed but is there for clarity.
 
 Plug the micro:bit into the Raspberry Pi's USB socket.
