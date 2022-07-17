@@ -8,6 +8,8 @@ Log micro:bit sensor data as a CSV on a Raspberry Pi and serve it as a graph in 
 - A micro USB cable to connect the micro:bit to the Pi
 - Er, that's it
 
+![plot of temperatures](newplot-overnight.png)
+
 ## How to make it work
 
 ![blocks in MakeCode](microbit-serial-logger-1line-string-smol.png)
