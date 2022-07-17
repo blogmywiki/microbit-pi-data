@@ -39,7 +39,7 @@ Then, on a computer on the same network, open a browser and navigate to http://c
 
 ## Improvements
 
-You can customise this to log any data you like. You could use the micro:bit connnected to the Pi to receive sensor data by radio from micro:bits in other room or outdoors. 
+You can customise this to log any data you like. The micro:bit has built-in sensors for acceleration and magnetism in 3 dimensions as well as light, temperature and, on the V2 model, sound. You could use the micro:bit connnected to the Pi to receive sensor data by radio from micro:bits in other room or outdoors. 
 
 An obvious improvement is to make the Python script and webserver run automatically at start up, rather than manually in console windows on my laptop, but this is a good start and proof of concept I think. (See below).
 
