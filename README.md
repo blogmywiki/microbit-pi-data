@@ -85,3 +85,7 @@ If it doesn't work, check your wiring. And check you have a real DS18B20 not a f
 The BBC micro:bit V2 has its own excellent non-volatile data logging feature, which is how I gathered this data: http://suppertime.co.uk/microbit/data/int-ext-MY_DATA.HTM
 
 Find out more about it here: https://microbit.org/get-started/user-guide/data-logging/
+
+## Moving pictures
+
+You can see a video about this project here: [https://youtu.be/xHIDSPagEh4](https://youtu.be/xHIDSPagEh4)
