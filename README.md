@@ -35,6 +35,9 @@ Now to start a simple webserver in Python, navigate to the directory where your 
 
 Then, on a computer on the same network, open a browser and navigate to http://ceefax:8888/ where 'ceefax' is the network name or IP address of your Pi, and 8888 is the port number you chose. And you should see your data in a lovely interactive graph. The HTML page uses plotly.js so you can isolate individual lines by clicking on the legend, zoom in and out, all sorts!
 
+You can play with a sample graph produced by this code here: http://suppertime.co.uk/microbit/data/ 
+I changed the line type for the internal temperature from 'spline' to 'linear' here as the readings from the internal temperature sensor are only in whole numbers. I also added a button to download the raw CSV file.
+
 ![screenshot of webpage](screenshot.png)
 
 ## Improvements
